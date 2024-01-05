@@ -11,8 +11,10 @@ void main() async {
 }
 
 Future<void> _initialize() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  KakaoSdk.init(nativeAppKey: dotenv.get("KAKAO_NATIVE_KEY"));
+  KakaoSdk.init(
+    nativeAppKey: dotenv.get("KAKAO_NATIVE_KEY"),
+    javaScriptAppKey: dotenv.get("JAVASCRIPT_APP_KEY"),
+  );
 }
 
 class MyApp extends StatelessWidget {
