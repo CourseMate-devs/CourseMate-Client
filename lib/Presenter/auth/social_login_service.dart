@@ -43,6 +43,7 @@ class SocialLoginService {
     } else {
       try {
         print('카카오 계정으로 로그인 시도');
+        //해시키 확인
         // print(await KakaoSdk.origin);
         await UserApi.instance.loginWithKakaoAccount();
         print('카카오계정으로 로그인 성공');
